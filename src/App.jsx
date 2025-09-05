@@ -21,7 +21,7 @@ return (
 	<>
 		<div className="flex items-center justify-center w-screen h-screen">
 			<div className="bg-gray-100 w-[40%] h-[80%] text-gray-800">        
-				<h1 className='text-center'>Hello World!!</h1>
+				<h1 className='text-center'>Todo App</h1>
 				<div className="flex justify-center gap-1.5">
 					<input
 						type="text" 
@@ -33,18 +33,18 @@ return (
 						className="bg-amber-900 cursor-pointer"
 						onClick={() => {addToDo()}}
 					>
-						Hello
+						Add Task
 					</button>
 				</div>
-				<ul>
-					{
-						toDos.map((todo, index) => 
-							<div className="flex justify-center gap-4">
-								<li key={index}>{todo}</li> <input type="checkbox" />
-							</div>
-						)
-					}
-				</ul>
+				<div className="flex justify-center gap-4">
+					<ul>
+						{
+							toDos.map((todo, index) => 
+									<li key={index}>{todo} <input type="checkbox" /></li> 
+							)
+						}
+					</ul>
+				</div>
 			</div>
 		</div>
 	</>
