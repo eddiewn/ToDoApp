@@ -17,10 +17,6 @@ function App() {
 	}
 
 
-useEffect(()=> {
-	console.log(toDos)
-},[toDos]);
-
 return (
 	<>
 		<div className="flex items-center justify-center w-screen h-screen">
@@ -41,7 +37,9 @@ return (
 				<ul>
 					{
 						toDos.map((todo, index) => 
-							<li key={index}>{todo}</li>
+							<div className="flex">
+								<li key={index}>{todo}</li> <input type="checkbox" />
+							</div>
 						)
 					}
 				</ul>
