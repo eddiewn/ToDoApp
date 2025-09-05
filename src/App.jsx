@@ -9,7 +9,8 @@ function App() {
 
 	function addToDo(){
 		if(input.trim() != ""){
-			setToDos([...toDos, input]);			
+			setToDos([...toDos, input]);		
+			setInput("");	
 		}else{
 			alert("Missing input")
 		}
@@ -44,8 +45,6 @@ return (
 						)
 					}
 				</ul>
-
-
 			</div>
 		</div>
 	</>
